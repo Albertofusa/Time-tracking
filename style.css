@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --light-red-work: hsl(15, 100%, 70%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+body {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  background-color: var(--very-dark-blue);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tracking__card {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(2, 250px);
+  gap: 20px;
+  /* height: 70%;
+  width: 80%; */
+}
+
+.card__user {
+  grid-row: 1/3;
+  position: relative;
+}
+
+.card__user__report {
+  border-radius: 10px;
+  background-color: var(--blue);
+  padding: 30px 25px;
+  width: 100%;
+  height: 73%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.card__user__report--avatar {
+  height: 80px;
+  border: 5px solid white;
+  border-radius: 100%;
+  margin-bottom: 30px;
+}
+
+.card__user__report--text {
+  color: var(--pale-blue);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.card__user__report--name-user {
+  color: aliceblue;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.card__user__days {
+  width: 100%;
+  height: 30%;
+  border-radius: 10px;
+  background-color: var(--dark-blue);
+  padding: 25px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.card__user__days--time {
+  color: var(--desaturated-blue);
+  margin-top: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card__user__days--time:hover {
+  color: var(--pale-blue);
+}
+
+.cards {
+  position: relative;
+}
+
+.cards__banners {
+  height: 30%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--light-red-work);
+  background-image: url(/img/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: 94%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.banner-play {
+  background-image: url(/img/icon-play.svg);
+  background-color: var(--soft-blue-play);
+}
+
+.banner-study {
+  background-image: url(/img/icon-study.svg);
+  background-color: var(--light-red-study);
+}
+
+.banner-exercise {
+  background-image: url(/img/icon-exercise.svg);
+  background-color: var(--lime-green-exercise);
+}
+
+.banner-social {
+  background-image: url(/img/icon-social.svg);
+  background-color: var(--violet-social);
+}
+
+.banner-self-care {
+  background-image: url(/img/icon-self-care.svg);
+  background-color: var(--soft-orange-self-care);
+}
+
+.card__content {
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  padding: 25px;
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+
+.card__content:active {
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+.cards__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cards__header--title {
+  color: white;
+}
+
+.cards__header--menu {
+  height: 5px;
+  cursor: pointer;
+}
+
+.cards__time {
+  color: white;
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.cards__summary {
+  color: var(--pale-blue);
+  font-size: 15px;
+}
